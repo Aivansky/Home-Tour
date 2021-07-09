@@ -2,11 +2,14 @@ package fixtures;
 
 public class Room extends Fixture {
 private Room[] exits;
+public Skaven currentObject;
 
 
-public Room(String name, String shortDescription, String longDescription) {
+public Room(String name, String shortDescription, String longDescription,
+		 Skaven currentObj) {
 	super(name, shortDescription, longDescription);
-	this.exits = new Room[4]; 
+	this.exits = new Room[10]; 
+    this.currentObject = currentObj;
 }
 	
 public Room[] getExits() {
@@ -20,22 +23,20 @@ public void setExits(Room[] exits) {
 public Room getExit(String direction) {
 	int num = -1;
 	switch(direction) {
-	case "n":
+	case "north":
 		num = 0;
 		break;
-		case "e":
+		case "east":
 			num = 1;
 			break;
-		case "s":
+		case "south":
 			num = 2;
 			break;
-		case "w":
+		case "west":
 			num = 3;
 			break;
 	}
 	return this.exits[num];
 }
-
-
 
 }

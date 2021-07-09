@@ -35,8 +35,13 @@ public void setLongDescrpition(String longDescription) {
 	this.descriptionL=longDescription;
 }
 
+public void pln(String str) {
+	System.out.println(str);
+}
+
 @Override
 public String toString() {
 	return nameR +"\n"+ descriptionS + "\n" + descriptionL + "";
 }
+
 }

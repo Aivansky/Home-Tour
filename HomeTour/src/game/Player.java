@@ -14,4 +14,16 @@ public Room getCurrentRoom() {
 public void setCurrentRoom(Room currentRoom) {
 	this.currentRoom = currentRoom;
 }
+
+public void purge()
+{
+	   if (currentRoom.currentObject == null)
+	   {
+		   System.out.println("There are no ratmen present.");
+		   return;
+	   }
+	   System.out.println("You smite the hidden " + currentRoom.currentObject.nameR);
+	
+}
+
 }
